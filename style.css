@@ -1,0 +1,89 @@
+body {
+    font-family: 'Montserrat', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #1c1c1c;
+    /* Dark background */
+    color: #f0f0f0;
+    /* Light text color */
+    text-align: center;
+    padding: 20px;
+}
+
+h1 {
+    color: #e3b04b;
+    /* Golden color similar to Helldivers 2 theme */
+    font-weight: bold;
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+#stratagem-grid {
+    display: inline-grid;
+    /* Changed from grid to inline-grid */
+    grid-auto-flow: row;
+    /* Place items in rows automatically */
+    grid-template-columns: auto auto auto;
+    /* Three columns of auto-width */
+    gap: 10px;
+    /* Small gap between items */
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    background-color: #262626;
+    /* Slightly lighter background for the grid */
+    padding: 10px;
+    border-radius: 8px;
+    border: 2px solid #444;
+    /* Subtle border around the grid */
+}
+
+#stratagem-grid img {
+    max-width: 80px;
+    /* Set a fixed size for better control */
+    height: auto;
+    border: 2px solid #555;
+    /* Darker border around images */
+    border-radius: 5px;
+    /* Smaller border radius */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    /* Subtle shadow */
+}
+
+button {
+    display: block;
+    /* Make the button a block element */
+    margin: 30px auto 0 auto;
+    /* Center the button and add margin on top */
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #e3b04b;
+    /* Golden background */
+    color: #1c1c1c;
+    /* Dark text */
+    border: 2px solid #444;
+    /* Dark border */
+    border-radius: 5px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+    /* Button shadow */
+    transition: background-color 0.3s, transform 0.3s;
+    /* Smooth transition */
+    font-family: 'Montserrat', sans-serif;
+}
+
+button:hover {
+    background-color: #d39d42;
+    /* Slightly brighter on hover */
+    transform: translateY(-2px);
+    /* Lift effect on hover */
+}
+
+#stratagem-grid div {
+    text-align: left;
+    /* Align labels to the left */
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 10px;
+    color: #e3b04b;
+    /* Golden color for player labels */
+    font-family: 'Montserrat', sans-serif;
+}
