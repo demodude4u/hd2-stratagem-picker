@@ -39,14 +39,14 @@ function pickStratagems() {
         stratagemPicks.push(selectedStratagems);
     }
 
-    // Display the stratagems with player labels
+    // Display the stratagems with player labels and an "ANY" slot
     const grid = document.getElementById('stratagem-grid');
     grid.innerHTML = ''; // Clear previous results
     stratagemPicks.forEach((playerPicks, index) => {
         // Create player label
         const playerLabel = document.createElement('div');
         playerLabel.textContent = `Player ${index + 1}`;
-        playerLabel.style.gridColumn = "span 3";
+        playerLabel.style.gridColumn = "span 4";
         playerLabel.style.fontWeight = "bold";
         playerLabel.style.marginBottom = "10px";
         grid.appendChild(playerLabel);
@@ -58,5 +58,11 @@ function pickStratagems() {
             img.alt = strat;
             grid.appendChild(img);
         });
+
+        // Add an "ANY" slot using an image
+        const anyImg = document.createElement('img');
+        anyImg.src = `stratagems/any_slot.png`; // Path to your ANY image
+        anyImg.alt = "ANY";
+        grid.appendChild(anyImg);
     });
 }

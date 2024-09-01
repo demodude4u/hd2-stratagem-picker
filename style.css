@@ -18,11 +18,10 @@ h1 {
 
 #stratagem-grid {
     display: inline-grid;
-    /* Changed from grid to inline-grid */
     grid-auto-flow: row;
     /* Place items in rows automatically */
-    grid-template-columns: auto auto auto;
-    /* Three columns of auto-width */
+    grid-template-columns: auto auto auto auto;
+    /* Four columns of auto-width */
     gap: 10px;
     /* Small gap between items */
     justify-content: center;
@@ -37,15 +36,35 @@ h1 {
 }
 
 #stratagem-grid img {
-    max-width: 80px;
-    /* Set a fixed size for better control */
-    height: auto;
+    width: 50px;
+    /* Ensure fixed size for icons */
+    height: 50px;
     border: 2px solid #555;
     /* Darker border around images */
     border-radius: 5px;
     /* Smaller border radius */
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
     /* Subtle shadow */
+    vertical-align: middle;
+    /* Align vertically with ANY slot */
+}
+
+.any-slot {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #444;
+    color: #e3b04b;
+    font-weight: bold;
+    border: 2px solid #555;
+    border-radius: 5px;
+    width: 50px;
+    /* Match size to icons */
+    height: 50px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    /* Subtle shadow to match icons */
+    vertical-align: middle;
+    /* Align with icons */
 }
 
 button {
@@ -67,7 +86,6 @@ button {
     /* Button shadow */
     transition: background-color 0.3s, transform 0.3s;
     /* Smooth transition */
-    font-family: 'Montserrat', sans-serif;
 }
 
 button:hover {
