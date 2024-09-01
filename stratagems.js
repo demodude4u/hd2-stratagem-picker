@@ -4,6 +4,7 @@
 function pickStratagems() {
     const exclusiveAttributes = ["backpack", "support", "mines", "exo"];
     const stratagemPicks = [];
+    const usedStratagems = new Set(); // Track used stratagems to avoid duplicates
 
     for (let player = 0; player < 4; player++) {
         const selectedStratagems = [];
@@ -19,8 +20,9 @@ function pickStratagems() {
                     return stratagems[s].some(attr => exclusiveAttributes.includes(attr) && attributes.includes(attr));
                 });
 
-                if (!conflicts) {
+                if (!conflicts && !usedStratagems.has(randomKey)) { // Ensure no duplicates
                     selectedStratagems.push(randomKey);
+                    usedStratagems.add(randomKey); // Mark this stratagem as used
                     validPick = true;
                 }
             }
