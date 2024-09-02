@@ -6,6 +6,14 @@ function pickStratagems() {
     const stratagemPicks = [];
     const usedStratagems = new Set(); // Track used stratagems to avoid duplicates
 
+    // Player colors
+    const playerColors = [
+        "#fca94d", // Player 1
+        "#9abafa", // Player 2
+        "#fa9af9", // Player 3
+        "#84e166"  // Player 4
+    ];
+
     for (let player = 0; player < 4; player++) {
         const selectedStratagems = [];
 
@@ -43,26 +51,36 @@ function pickStratagems() {
     const grid = document.getElementById('stratagem-grid');
     grid.innerHTML = ''; // Clear previous results
     stratagemPicks.forEach((playerPicks, index) => {
+        // Create a container for each player's picks
+        const playerContainer = document.createElement('div');
+        playerContainer.classList.add('player-container');
+        playerContainer.style.borderColor = playerColors[index]; // Apply player-specific border color
+
         // Create player label
         const playerLabel = document.createElement('div');
         playerLabel.textContent = `Player ${index + 1}`;
         playerLabel.style.gridColumn = "span 4";
         playerLabel.style.fontWeight = "bold";
-        playerLabel.style.marginBottom = "10px";
-        grid.appendChild(playerLabel);
+        playerLabel.style.color = playerColors[index]; // Apply player-specific color
+        playerContainer.appendChild(playerLabel);
 
         // Display the stratagems
         playerPicks.forEach(strat => {
             const img = document.createElement('img');
             img.src = `stratagems/${strat}.webp`;
             img.alt = strat;
-            grid.appendChild(img);
+            playerContainer.appendChild(img);
         });
 
         // Add an "ANY" slot using an image
         const anyImg = document.createElement('img');
         anyImg.src = `stratagems/any_slot.png`; // Path to your ANY image
         anyImg.alt = "ANY";
-        grid.appendChild(anyImg);
+        anyImg.width = 50; // Ensuring it's 50x50
+        anyImg.height = 50;
+        playerContainer.appendChild(anyImg);
+
+        // Append the player's container to the grid
+        grid.appendChild(playerContainer);
     });
 }
