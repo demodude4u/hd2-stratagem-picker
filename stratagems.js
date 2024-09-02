@@ -76,8 +76,6 @@ function pickStratagems() {
         const anyImg = document.createElement('img');
         anyImg.src = `stratagems/any_slot.png`; // Path to your ANY image
         anyImg.alt = "ANY";
-        anyImg.width = 50; // Ensuring it's 50x50
-        anyImg.height = 50;
         playerContainer.appendChild(anyImg);
 
         // Append the player's container to the grid
