@@ -93,6 +93,10 @@ const stratagems = {
         "blue",
         "backpack"
     ],
+    "Guard_Dog_Dog_Breath": [
+        "blue",
+        "backpack"
+    ],
     "Heavy_Machine_Gun": [
         "blue",
         "support"
@@ -158,6 +162,10 @@ const stratagems = {
         "red",
         "orbital"
     ],
+    "Orbital_Napalm_Barrage": [
+        "red",
+        "orbital"
+    ],
     "Orbital_Precision_Strike": [
         "red",
         "orbital"
@@ -210,6 +218,10 @@ const stratagems = {
         "backpack"
     ],
     "Stalwart": [
+        "blue",
+        "support"
+    ],
+    "Sterilizer": [
         "blue",
         "support"
     ],
